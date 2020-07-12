@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetBool("isJumping", jump);
         Debug.Log("Onland " +  animator.GetBool("isJumping"));
+        
     }
     private void FixedUpdate()
     {

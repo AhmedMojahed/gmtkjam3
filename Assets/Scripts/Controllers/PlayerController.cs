@@ -5,12 +5,16 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public Animator animator;
+    public AudioSource audioSource;
     public CharacterController2D controller;
     [SerializeField]float moveSpeed = 40f;
     float horizontalMove = 0;
     bool jump= false;
 
-
+    private void Awake()
+    {
+        audioSource = FindObjectOfType<AudioSource>();
+    }
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * moveSpeed;
@@ -27,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
    
     public void OnLanding()
     {
+        audioSource.PlayOneShot(audioSource.clip);
         animator.SetBool("isJumping", jump);
         Debug.Log("Onland " +  animator.GetBool("isJumping"));
     }
