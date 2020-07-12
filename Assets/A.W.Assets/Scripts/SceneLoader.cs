@@ -53,7 +53,7 @@ public class SceneLoader : MonoBehaviour
 
     public void ResumeGame()
     {
-        FindObjectOfType<Player>().EnablePauseCanvas(false);
+        FindObjectOfType<PauseCanvas>().EnablePauseCanvas(false);
     }
 
     public void RestartGame()
