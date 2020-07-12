@@ -4741,6 +4741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnPosition: {fileID: 501817049}
   slider: {fileID: 90418518}
+  fill: {fileID: 1640582186}
 --- !u!1 &1261562754
 GameObject:
   m_ObjectHideFlags: 0

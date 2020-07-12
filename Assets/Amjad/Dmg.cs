@@ -8,6 +8,7 @@ public class Dmg : MonoBehaviour
 {
     public GameObject SpawnPosition;
     public Slider slider;
+    public Image fill;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.transform.tag == "Acid")
@@ -31,9 +32,26 @@ public class Dmg : MonoBehaviour
 
         slider.value += 0.05f;
 
-        /*if(slider.value >= 50)
+        if(slider.value >= 50)
         {
-            Slider. Color.Lerp(Color.yellow, Color.red, 0.8f);
-        }*/
+            fill.color = Color.Lerp(Color.yellow, Color.red, 0.8f);
+        }
+
+        if(slider.value >= 25 && slider.value <= 50)
+        {
+            // shake 5fef
+        }
+        else if(slider.value >= 25 && slider.value <= 50)
+        {
+            // shake zyada 
+        }
+        else if(slider.value >= 50 && slider.value <= 75)
+        {
+            //more more shake 
+        }
+        else if(slider.value >= 75 && slider.value < 101)
+        {
+            //OP SHAKE 
+        }
     }
 }
