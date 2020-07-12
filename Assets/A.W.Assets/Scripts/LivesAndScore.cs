@@ -6,7 +6,7 @@ using TMPro;
 public class LivesAndScore : MonoBehaviour
 {
     [SerializeField] int score = 200, lives = 3;
-    [SerializeField] TextMeshProUGUI scoreText, livesText;
+    [SerializeField] TextMeshProUGUI livesText;
 
     // Start is called before the first frame update
     void Start()
@@ -16,15 +16,15 @@ public class LivesAndScore : MonoBehaviour
     
     private void UpdateText()
     {
-        scoreText.text = score.ToString();
+        //scoreText.text = score.ToString();
         livesText.text = lives.ToString();
     }
 
-    public void AddToScore(int scoreToAdd)
-    {
-        score += scoreToAdd;
-        UpdateText();
-    }
+    //public void AddToScore(int scoreToAdd)
+    //{
+    //    score += scoreToAdd;
+    //    UpdateText();
+    //}
 
     public void TakeLife()
     {
